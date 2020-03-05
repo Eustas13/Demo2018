@@ -61,10 +61,6 @@
                 .HasForeignKey(e => e.Комплектующий)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Материалы>()
-                .Property(e => e.Закупочная_цена)
-                .HasPrecision(10, 2);
-
             modelBuilder.Entity<Поставщик>()
                 .HasMany(e => e.Комплектующие)
                 .WithOptional(e => e.Поставщик)

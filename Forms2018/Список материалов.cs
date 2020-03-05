@@ -53,7 +53,14 @@ namespace Forms2018
         private void button3_Click(object sender, EventArgs e)
         {
             Изменить_материалы izm = new Изменить_материалы();
-            izm.Show();
+            Материалы rg = (Материалы)материалыBindingSource.Current;
+            izm.db = db;
+            izm.rg = rg;
+            DialogResult dr = izm.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                материалыBindingSource.DataSource = db.Материалы.ToList();
+            }
         }
     }
 }

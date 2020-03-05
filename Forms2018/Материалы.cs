@@ -31,7 +31,8 @@ namespace Forms2018
         [StringLength(50)]
         public string Тип_материала { get; set; }
 
-        public decimal? Закупочная_цена { get; set; }
+        [StringLength(150)]
+        public string Закупочная_цена { get; set; }
 
         [StringLength(100)]
         public string ГОСТ { get; set; }

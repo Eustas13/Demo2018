@@ -12,8 +12,8 @@ namespace Forms2018
 {
     public partial class Изменить_материалы : Form
     {
-        public Model1 db { get; set; }
-        Материалы rg = new Материалы();
+        public Model1 db {get; set;}
+        public Материалы rg { get; set; }
         public Изменить_материалы()
         {
             InitializeComponent();
@@ -31,14 +31,20 @@ namespace Forms2018
 
         private void button1_Click(object sender, EventArgs e)
         {
+            rg.Артикул = textBox1.Text;
+            rg.Наименование = textBox2.Text;
+            rg.Количество = Convert.ToInt32(textBox3.Text);
+            rg.Единица_изметререния = textBox4.Text;
+            rg.Закупочная_цена = textBox5.Text;
+            rg.Основной_поставщик = textBox6.Text;
             try
             {
                 db.SaveChanges();
                 MessageBox.Show("Данные успешно изменены");
             }
-            catch
+            catch(Exception x)
             {
-                MessageBox.Show("Ошибка!");
+                MessageBox.Show("Ошибка!" + x);
             }
         }
 
