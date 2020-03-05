@@ -165,6 +165,9 @@
     <EmbeddedResource Include="Директор.resx">
       <DependentUpon>Директор.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Заказчик.resx">
+      <DependentUpon>Заказчик.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Изменить_материалы.resx">
       <DependentUpon>Изменить_материалы.cs</DependentUpon>
     </EmbeddedResource>
